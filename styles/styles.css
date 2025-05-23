@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background: #fff;
+  color: #000;
+}
+.container {
+  width: 95%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2%;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2%;
+  border-bottom: 1px solid #ccc;
+}
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 3%;
+}
+.menu li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+.main-grid {
+  display: grid;
+  grid-template-columns: 65% 30%;
+  gap: 5%;
+  margin-top: 3%;
+}
+.calendar, .links {
+  margin-bottom: 5%;
+}
+.calendar .grid {
+  height: 200px;
+  background: #eee;
+  margin-top: 5%;
+}
+
+.links ul {
+  list-style: disc;
+  padding-left: 5%;
+  margin-top: 5%;
+}
+
+.news {
+  margin-top: 5%;
+}
+.news-boxes {
+  display: flex;
+  gap: 2%;
+  margin-top: 2%;
+}
+.news-item {
+  flex: 1;
+  background: #f4f4f4;
+  padding: 2%;
+  border: 1px solid #ccc;
+}
+
+.courses {
+  margin-top: 5%;
+}
+.course-list {
+  display: flex;
+  gap: 2%;
+  margin-top: 2%;
+}
+.course-item {
+  flex: 1;
+  background: #fafafa;
+  height: 150px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 2%;
+}
+
+footer {
+  margin-top: 5%;
+  border-top: 1px solid #ccc;
+  padding-top: 2%;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.footer-links li a {
+  text-decoration: none;
+  color: #000;
+}
