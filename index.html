@@ -7,76 +7,83 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="header-inner">
-          <div class="logo-title">
-            <img src="./images/logo.png" alt="Логотип" width="60" height="60"/>
-            <span class="site-title">LinguaEdu</span>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__inner">
+          <div class="header__logo-title">
+            <img class="header__logo" src="./images/logo.png" alt="Логотип" width="60" height="60"/>
+            <span class="header__site-title">LinguaEdu</span>
           </div>
-          <nav class="main-nav">
-            <ul class="menu">
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Курсы</a></li>
-              <li><a href="#">Медиаархив</a></li>
-              <li><a href="#">Форум</a></li>
+          <nav class="header__nav nav">
+            <ul class="nav__menu">
+              <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Курсы</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Медиаархив</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Форум</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
-    <main class="container">
-      <div class="main-grid">
-        <div>
-          <section class="welcome-text">
-            <h1>Добро пожаловать</h1>
-            <div class="welcome-desc">
-              <p>LinguaEdu - Образовательный портал для студентов и преподавателей профилей английского и немецкого языков. Интерактивные курсы, актуальные новости, методические материалы.</p>
+
+    <main class="main main__container">
+      <div class="main__grid">
+        <div class="main__content">
+          <section class="welcome">
+            <h1 class="welcome__title">Добро пожаловать</h1>
+            <div class="welcome__desc">
+              <p class="welcome__text">LinguaEdu - Образовательный портал для студентов и преподавателей профилей английского и немецкого языков. Интерактивные курсы, актуальные новости, методические материалы.</p>
             </div>
           </section>
 
           <section class="news">
-            <h2>Новости и обновления</h2>
-            <div class="news-boxes">
-              <div class="news-item news1"><span>Технологии на уроке: виртуальная реальность в обучении</span></div>
-              <div class="news-item news2"><span>Дистанционное обучение: как сохранить мотивацию?</span></div>
-              <div class="news-item news3"><span>Учитель нового поколения: цифровая педагогика в действии</span></div>
+            <h2 class="news__title">Новости и обновления</h2>
+            <div class="news__list">
+              <div class="news__item news__item--1"><span class="news__text">Технологии на уроке: виртуальная реальность в обучении</span></div>
+              <div class="news__item news__item--2"><span class="news__text">Дистанционное обучение: как сохранить мотивацию?</span></div>
+              <div class="news__item news__item--3"><span class="news__text">Учитель нового поколения: цифровая педагогика в действии</span></div>
             </div>
           </section>
         </div>
 
         <aside class="sidebar">
           <div class="calendar">
-            <h2>Календарь занятий</h3>
-            <div class="grid"></div>
+            <h2 class="calendar__title">Календарь занятий</h2>
+            <div class="calendar__grid"></div>
           </div>
-          <div class="links">
-            <h2>Быстрые ссылки</h3>
-            <ul>
-              <li>Расписание занятий</li>
-              <li>Личный кабинет</li>
-              <li>Методические материалы</li>
+          <div class="quick-links">
+            <h2 class="quick-links__title">Быстрые ссылки</h2>
+            <ul class="quick-links__list">
+              <li class="quick-links__item">Расписание занятий</li>
+              <li class="quick-links__item">Личный кабинет</li>
+              <li class="quick-links__item">Методические материалы</li>
             </ul>
           </div>
         </aside>
       </div>
 
       <section class="courses">
-        <h2>Избранные курсы</h2>
-        <div class="course-list">
-          <div class="course-item course1"><span>Английский для начинающих</span></div>
-          <div class="course-item course2"><span>Современный немецкий: от B1 до B2</span></div>
-          <div class="course-item course3"><span>Академическое письмо на английском</span></div>
-          <div class="course-item course4"><span>Методика преподавания иностранных языков</span></div>
+        <h2 class="courses__title">Избранные курсы</h2>
+        <div class="courses__list">
+          <div class="courses__item courses__item--1"><span class="courses__text">Английский для начинающих</span></div>
+          <div class="courses__item courses__item--2"><span class="courses__text">Современный немецкий: от B1 до B2</span></div>
+          <div class="courses__item courses__item--3"><span class="courses__text">Академическое письмо на английском</span></div>
+          <div class="courses__item courses__item--4"><span class="courses__text">Методика преподавания иностранных языков</span></div>
         </div>
       </section>
+
+      <form action="#" method="post" class="subscribe-form">
+        <label for="email" class="subscribe-form__label">Подпишитесь на новости:</label>
+        <input type="email" id="email" name="email" class="subscribe-form__input" required>
+        <button type="submit" class="subscribe-form__button">Подписаться</button>
+      </form>
     </main>
 
-    <footer>
-      <ul class="footer-links">
-        <li><a href="#">Контакты</a></li>
-        <li><a href="#">Политика</a></li>
-        <li><a href="#">Соцсети</a></li>
+    <footer class="footer">
+      <ul class="footer__links">
+        <li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Политика</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Соцсети</a></li>
       </ul>
     </footer>
   </body>
