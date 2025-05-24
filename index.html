@@ -4,93 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Образовательный портал</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/components.css">
-    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+    <link rel="stylesheet" href="styles/preloader.css" />
   </head>
   <body class="page">
-    <header class="header">
-      <div class="header__container">
-        <div class="header__inner">
-          <div class="header__logo-title">
-            <img class="header__logo" src="./images/logo.png" alt="Логотип" width="60" height="60" />
-            <span class="header__site-title">LinguaEdu</span>
-          </div>
-          <nav class="header__nav nav">
-            <ul class="nav__menu">
-              <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
-              <li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li>
-              <li class="nav__item"><a href="media.html" class="nav__link">Медиаархив</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Форум</a></li>
-            </ul>
-          </nav>
-          <button class="burger" aria-label="Открыть меню">
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <main class="main main__container">
-      <div class="main__grid">
-        <div class="main__content">
-          <section class="welcome">
-            <h1 class="welcome__title">Добро пожаловать</h1>
-            <div class="welcome__desc">
-              <p class="welcome__text">LinguaEdu - Образовательный портал для студентов и преподавателей профилей английского и немецкого языков. Интерактивные курсы, актуальные новости, методические материалы.</p>
+    <div class="preloader">
+      <div class="spinner"></div>
+    </div>
+    <div class="content" style="display: none;">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__inner">
+            <div class="header__logo-title">
+              <img class="header__logo" src="./images/logo.png" alt="Логотип" width="60" height="60" />
+              <span class="header__site-title">LinguaEdu</span>
             </div>
-          </section>
+            <nav class="header__nav nav">
+              <ul class="nav__menu">
+                <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li>
+                <li class="nav__item"><a href="media.html" class="nav__link">Медиаархив</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Форум</a></li>
+              </ul>
+            </nav>
+            <button class="burger" aria-label="Открыть меню">
+              <span class="burger__line"></span>
+              <span class="burger__line"></span>
+              <span class="burger__line"></span>
+            </button>
+          </div>
+        </div>
+      </header>
 
-          <section class="news">
-            <h2 class="news__title">Новости и обновления</h2>
-            <div class="news__list">
-              <!-- Новости выводятся динамически -->
+      <main class="main main__container">
+        <div class="main__grid">
+          <div class="main__content">
+            <section class="welcome">
+              <h1 class="welcome__title">Добро пожаловать</h1>
+              <div class="welcome__desc">
+                <p class="welcome__text">LinguaEdu - Образовательный портал для студентов и преподавателей профилей английского и немецкого языков. Интерактивные курсы, актуальные новости, методические материалы.</p>
+              </div>
+            </section>
+
+            <section class="news">
+              <h2 class="news__title">Новости и обновления</h2>
+              <div class="news__list">
+                <!-- Новости выводятся динамически -->
+              </div>
+            </section>
+          </div>
+
+          <aside class="sidebar">
+            <div class="calendar">
+              <h1 class="calendar__title">Календарь занятий</h1>
+              <div class="calendar__grid"></div>
             </div>
-          </section>
+            <div class="quick-links">
+              <h2 class="quick-links__title">Быстрые ссылки</h2>
+              <ul class="quick-links__list">
+                <li class="quick-links__item"><a href="#">Расписание занятий</a></li>
+                <li class="quick-links__item"><a href="#">Личный кабинет</a></li>
+                <li class="quick-links__item"><a href="#">Методические материалы</a></li>
+              </ul>
+            </div>
+          </aside>
         </div>
 
-        <aside class="sidebar">
-          <div class="calendar">
-            <h1 class="calendar__title">Календарь занятий</h1>
-            <div class="calendar__grid"></div>
+        <section class="courses">
+          <h2 class="courses__title">Избранные курсы</h2>
+          <div class="courses__list">
+            <!-- Курсы выводятся динамически -->
           </div>
-          <div class="quick-links">
-            <h2 class="quick-links__title">Быстрые ссылки</h2>
-            <ul class="quick-links__list">
-              <li class="quick-links__item"><a href="#">Расписание занятий</a></li>
-              <li class="quick-links__item"><a href="#">Личный кабинет</a></li>
-              <li class="quick-links__item"><a href="#">Методические материалы</a></li>
-            </ul>
-          </div>
-        </aside>
-      </div>
+        </section>
 
-      <section class="courses">
-        <h2 class="courses__title">Избранные курсы</h2>
-        <div class="courses__list">
-          <!-- Курсы выводятся динамически -->
-        </div>
-      </section>
+        <form action="#" method="post" class="subscribe-form">
+          <label for="email" class="subscribe-form__label">Подпишитесь на новости:</label>
+          <input type="email" id="email" name="email" class="subscribe-form__input" required>
+          <button type="submit" class="subscribe-form__button">Подписаться</button>
+        </form>
+      </main>
 
-      <form action="#" method="post" class="subscribe-form">
-        <label for="email" class="subscribe-form__label">Подпишитесь на новости:</label>
-        <input type="email" id="email" name="email" class="subscribe-form__input" required>
-        <button type="submit" class="subscribe-form__button">Подписаться</button>
-      </form>
-    </main>
-
-    <footer class="footer">
-      <ul class="footer__links">
-        <li class="footer__item"><a href="contacts.html" class="footer__link">Контакты</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Политика</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Соцсети</a></li>
-      </ul>
-    </footer>
+      <footer class="footer">
+        <ul class="footer__links">
+          <li class="footer__item"><a href="contacts.html" class="footer__link">Контакты</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Политика</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Соцсети</a></li>
+        </ul>
+      </footer>
+    </div>
     <script src="js/calendar.js"></script>
     <script src="js/burger.js"></script>
     <script src="js/scripts.js"></script>

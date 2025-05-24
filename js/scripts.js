@@ -1,5 +1,12 @@
 'use strict';
 
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelector('.preloader').style.display = 'none';
+    document.querySelector('.content').style.display = 'block';
+  }, 1000); // Задержка в 1 секунду
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const courseTitles = [
     'Английский для начинающих',
@@ -7,21 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'Академическое письмо на английском',
     'Методика преподавания иностранных языков'
   ];
-
-  const newsList = [
-    {
-        title: 'Технологии на уроке',
-        text: 'Виртуальная реальность в обучении — первый опыт преподавателей.'
-    },
-    {
-        title: 'Дистанционное обучение',
-        text: 'Как сохранить мотивацию студентов и избежать выгорания?'
-    },
-    {
-        title: 'Цифровая педагогика',
-        text: 'Учитель нового поколения — технологии и подходы.'
-    }
-  ]
 
   const coursesContainer = document.querySelector('.courses__list');
   if (coursesContainer) {
@@ -34,19 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   const newsContainer = document.querySelector('.news__list');
-  if (newsContainer) {
-    newsContainer.innerHTML = '';
-    for (const index in newsList) {
-      if (newsList.hasOwnProperty(index)) {
-        const news = newsList[index];
-        const newsItem = document.createElement('div');
-        newsItem.className = `news__item news__item--${parseInt(index) + 1}`;
-        newsItem.innerHTML = `
-          <p class="news__text" title="${news.title}">${news.text}</p>
-        `;
-        newsContainer.appendChild(newsItem);
-      }
-    }
+    if (newsContainer) {
+    fetch('data/news.json')
+      .then(response => response.json())
+      .then(newsList => {
+        newsContainer.innerHTML = '';
+        for (const index in newsList) {
+          const news = newsList[index];
+          const newsItem = document.createElement('div');
+          newsItem.className = `news__item news__item--${parseInt(index) + 1}`;
+          newsItem.innerHTML = `
+            <p class="news__text" title="${news.title}">${news.text}</p>
+          `;
+          newsContainer.appendChild(newsItem);
+        }
+      });
   }
 
   // Кнопка скролла вверх

@@ -10,91 +10,98 @@
     <link rel="stylesheet" href="styles/layout.css" />
     <link rel="stylesheet" href="styles/components.css" />
     <link rel="stylesheet" href="styles/responsive.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+    <link rel="stylesheet" href="styles/preloader.css" />
   </head>
   <body class="page">
-    <header class="header">
-      <div class="header__container">
-        <div class="header__inner">
-          <div class="header__logo-title">
-            <img class="header__logo" src="./images/logo.png" alt="Логотип" width="60" height="60" />
-            <span class="header__site-title">LinguaEdu</span>
-          </div>
-          <nav class="header__nav nav">
-            <ul class="nav__menu">
-              <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
-              <li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li>
-              <li class="nav__item"><a href="media.html" class="nav__link">Медиаархив</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Форум</a></li>
-            </ul>
-          </nav>
-          <button class="burger" aria-label="Открыть меню">
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-          </button>
+    <div class="preloader">
+      <div class="spinner"></div>
+    </div>
+    <div class="content" style="display: none;">
+        <header class="header">
+        <div class="header__container">
+            <div class="header__inner">
+            <div class="header__logo-title">
+                <img class="header__logo" src="./images/logo.png" alt="Логотип" width="60" height="60" />
+                <span class="header__site-title">LinguaEdu</span>
+            </div>
+            <nav class="header__nav nav">
+                <ul class="nav__menu">
+                <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li>
+                <li class="nav__item"><a href="media.html" class="nav__link">Медиаархив</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Форум</a></li>
+                </ul>
+            </nav>
+            <button class="burger" aria-label="Открыть меню">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+            </div>
         </div>
-      </div>
-    </header>
+        </header>
 
-    <main class="main main__container">
-      <section class="media">
-        <h1 class="media__title">Медиаархив</h1>
-        <p class="welcome__desc">Коллекция материалов для изучения английского и немецкого языков: видеолекции, презентации, рабочие листы.</p>
+        <main class="main main__container">
+        <section class="media">
+            <h1 class="media__title">Медиаархив</h1>
+            <p class="welcome__desc">Коллекция материалов для изучения английского и немецкого языков: видеолекции, презентации, рабочие листы.</p>
 
-        <div class="courses__list">
-          <div class="courses__item courses__item--1">
-            <span class="courses__text">Видеоуроки по грамматике (EN)</span>
-          </div>
-          <div class="courses__item courses__item--2">
-            <span class="courses__text">Презентации по теме "Путешествия" (DE)</span>
-          </div>
-          <div class="courses__item courses__item--3">
-            <span class="courses__text">Рабочие листы A2–B1 (EN)</span>
-          </div>
-          <div class="courses__item courses__item--4">
-            <span class="courses__text">Методические видео для учителей</span>
-          </div>
-        </div>
+            <div class="courses__list">
+            <div class="courses__item courses__item--1">
+                <span class="courses__text">Видеоуроки по грамматике (EN)</span>
+            </div>
+            <div class="courses__item courses__item--2">
+                <span class="courses__text">Презентации по теме "Путешествия" (DE)</span>
+            </div>
+            <div class="courses__item courses__item--3">
+                <span class="courses__text">Рабочие листы A2–B1 (EN)</span>
+            </div>
+            <div class="courses__item courses__item--4">
+                <span class="courses__text">Методические видео для учителей</span>
+            </div>
+            </div>
 
-        <div class="main__content">
-          <section>
-            <h2>Видеоуроки</h2>
-            <ul class="quick-links__list">
-              <li><a href="#">Глагол to be в настоящем времени</a></li>
-              <li><a href="#">Past Simple: ключевые правила</a></li>
-              <li><a href="#">Немецкий алфавит и произношение</a></li>
-            </ul>
-          </section>
+            <div class="main__content">
+            <section>
+                <h2>Видеоуроки</h2>
+                <ul class="quick-links__list">
+                <li><a href="#">Глагол to be в настоящем времени</a></li>
+                <li><a href="#">Past Simple: ключевые правила</a></li>
+                <li><a href="#">Немецкий алфавит и произношение</a></li>
+                </ul>
+            </section>
 
-          <section>
-            <h2>Презентации</h2>
-            <ul class="quick-links__list">
-              <li><a href="#">Modalverben: немецкие модальные глаголы</a></li>
-              <li><a href="#">Education in the UK — презентация</a></li>
-              <li><a href="#">Word Order in Questions</a></li>
-            </ul>
-          </section>
+            <section>
+                <h2>Презентации</h2>
+                <ul class="quick-links__list">
+                <li><a href="#">Modalverben: немецкие модальные глаголы</a></li>
+                <li><a href="#">Education in the UK — презентация</a></li>
+                <li><a href="#">Word Order in Questions</a></li>
+                </ul>
+            </section>
 
-          <section>
-            <h2>Рабочие листы</h2>
-            <ul class="quick-links__list">
-              <li><a href="#">Английский B1: тест по чтению</a></li>
-              <li><a href="#">Немецкий A2: диалоги и фразы</a></li>
-              <li><a href="#">Упражнения на времена (англ.)</a></li>
-            </ul>
-          </section>
-        </div>
-      </section>
-    </main>
+            <section>
+                <h2>Рабочие листы</h2>
+                <ul class="quick-links__list">
+                <li><a href="#">Английский B1: тест по чтению</a></li>
+                <li><a href="#">Немецкий A2: диалоги и фразы</a></li>
+                <li><a href="#">Упражнения на времена (англ.)</a></li>
+                </ul>
+            </section>
+            </div>
+        </section>
+        </main>
 
-    <footer class="footer">
-      <ul class="footer__links">
-        <li class="footer__item"><a href="contacts.html" class="footer__link">Контакты</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Политика</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Соцсети</a></li>
-      </ul>
-    </footer>
+        <footer class="footer">
+        <ul class="footer__links">
+            <li class="footer__item"><a href="contacts.html" class="footer__link">Контакты</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Политика</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Соцсети</a></li>
+        </ul>
+        </footer>
+    </div>
   <script src="js/burger.js"></script>
-  <script src="js/language_button.js"></script>
+  <script src="js/scripts.js"></script>
   </body>
 </html>
