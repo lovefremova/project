@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Образовательный портал</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
   </head>
   <body class="page">
     <header class="header">
@@ -16,12 +21,17 @@
           </div>
           <nav class="header__nav nav">
             <ul class="nav__menu">
-              <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Курсы</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Медиаархив</a></li>
+              <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+              <li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li>
+              <li class="nav__item"><a href="media.html" class="nav__link">Медиаархив</a></li>
               <li class="nav__item"><a href="#" class="nav__link">Форум</a></li>
             </ul>
           </nav>
+          <button class="burger" aria-label="Открыть меню">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
         </div>
       </div>
     </header>
@@ -81,7 +91,7 @@
 
     <footer class="footer">
       <ul class="footer__links">
-        <li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
+        <li class="footer__item"><a href="contacts.html" class="footer__link">Контакты</a></li>
         <li class="footer__item"><a href="#" class="footer__link">Политика</a></li>
         <li class="footer__item"><a href="#" class="footer__link">Соцсети</a></li>
       </ul>

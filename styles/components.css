@@ -65,7 +65,6 @@
   max-width: 1440px;
   margin: 0 auto;
   width: 95%;
-  padding: 20px;
 }
 
 /* Welcome */
@@ -297,4 +296,99 @@ button:hover {
 .courses__list {
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+/* ----------- Состояния для ссылок ----------- */
+a:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+a:active {
+  opacity: 0.8;
+}
+
+/* ----------- Состояния для кнопок ----------- */
+button:focus,
+.subscribe-form__button:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+button:active,
+.subscribe-form__button:active {
+  transform: scale(0.98);
+}
+
+button:disabled,
+.subscribe-form__button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ----------- Состояния для input ----------- */
+input:focus,
+.subscribe-form__input:focus {
+  outline: 2px solid #3498db;
+  border-color: #3498db;
+}
+
+input:disabled {
+  background-color: #eee;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.burger__line {
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+.contacts__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contacts__desc {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.contacts__subtitle {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.contacts__list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.contacts__list li {
+  margin-bottom: 0.5em;
+}
+
+.contacts__list a {
+  color: #3498db;
+}
+
+.contacts__form-block {
+  margin-top: 2rem;
 }

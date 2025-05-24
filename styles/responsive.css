@@ -1,0 +1,61 @@
+@media (max-width: 768px) {
+  /* Основная сетка переходит в столбец */
+  .main__grid {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+
+  /* Навигация — вертикальная */
+  .nav__menu {
+    display: none;
+    flex-direction: column;
+    background: #2c3e50;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 1em 0;
+    z-index: 1000;
+  }
+
+  .nav__menu--active {
+    display: flex;
+  }
+
+  /* Курсы и новости — по одному в ряд */
+  .news__list,
+  .courses__list {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .news__item,
+  .courses__item {
+    height: auto;
+    min-height: 10em;
+  }
+
+  /* Центровка текста в курсе */
+  .courses__text,
+  .news__text {
+    position: static;
+    text-align: center;
+    padding: 1em 0;
+  }
+
+  /* Уменьшаем отступы в форме */
+  .subscribe-form {
+    padding: 1em;
+    width: 100%;
+  }
+
+  .footer__links {
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+  }
+
+  .burger {
+    display: flex;
+  }
+}

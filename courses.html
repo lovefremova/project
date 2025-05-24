@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Курсы — LinguaEdu</title>
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__inner">
+          <div class="header__logo-title">
+            <img class="header__logo" src="./images/logo.png" alt="Логотип" width="60" height="60" />
+            <span class="header__site-title">LinguaEdu</span>
+          </div>
+          <nav class="header__nav nav">
+            <ul class="nav__menu">
+              <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+              <li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li>
+              <li class="nav__item"><a href="media.html" class="nav__link">Медиаархив</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Форум</a></li>
+            </ul>
+          </nav>
+          <button class="burger" aria-label="Открыть меню">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main main__container">
+      <section class="courses">
+        <h1 class="courses__title">Доступные курсы</h1>
+        <div class="courses__list">
+          <div class="courses__item courses__item--1">
+            <span class="courses__text">Английский для начинающих</span>
+          </div>
+          <div class="courses__item courses__item--2">
+            <span class="courses__text">Современный немецкий: от B1 до B2</span>
+          </div>
+          <div class="courses__item courses__item--3">
+            <span class="courses__text">Академическое письмо на английском</span>
+          </div>
+          <div class="courses__item courses__item--4">
+            <span class="courses__text">Методика преподавания иностранных языков</span>
+          </div>
+        </div>
+
+        <div class="main__content">
+          <article class="course-description">
+            <h2>Английский для начинающих</h2>
+            <p>Курс рассчитан на полных новичков. Осваиваются основы грамматики, чтение и устная речь.</p>
+            <button class="subscribe-form__button">Подробнее</button>
+          </article>
+
+          <article class="course-description">
+            <h2>Современный немецкий: от B1 до B2</h2>
+            <p>Курс направлен на развитие навыков говорения, понимания и письма на уровне среднего и выше.</p>
+            <button class="subscribe-form__button">Подробнее</button>
+          </article>
+
+          <article class="course-description">
+            <h2>Академическое письмо на английском</h2>
+            <p>Развитие навыков написания эссе, научных и аналитических текстов на английском языке.</p>
+            <button class="subscribe-form__button">Подробнее</button>
+          </article>
+
+          <article class="course-description">
+            <h2>Методика преподавания иностранных языков</h2>
+            <p>Курс для будущих преподавателей. Изучаются современные методики и цифровые инструменты.</p>
+            <button class="subscribe-form__button">Подробнее</button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <ul class="footer__links">
+        <li class="footer__item"><a href="contacts.html" class="footer__link">Контакты</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Политика</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Соцсети</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

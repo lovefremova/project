@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты — LinguaEdu</title>
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__inner">
+          <div class="header__logo-title">
+            <img class="header__logo" src="./images/logo.png" alt="Логотип" width="60" height="60" />
+            <span class="header__site-title">LinguaEdu</span>
+          </div>
+          <nav class="header__nav nav">
+            <ul class="nav__menu">
+              <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+              <li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li>
+              <li class="nav__item"><a href="media.html" class="nav__link">Медиаархив</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Форум</a></li>
+            </ul>
+          </nav>
+          <button class="burger" aria-label="Открыть меню">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main main__container">
+      <section class="contacts">
+        <h1 class="contacts__title">Контакты</h1>
+        <p class="contacts__desc">Свяжитесь с нами по любым вопросам, связанным с обучением, регистрацией или сотрудничеством.</p>
+
+        <div class="main__grid">
+            <div class="main__content">
+            <div class="contacts__info">
+                <h2 class="contacts__subtitle">Наши данные</h2>
+                <ul class="contacts__list">
+                <li><strong>📧 Разработчик:</strong> Ефремова Любовь Максимовна</li>  
+                <li><strong>📧 Email:</strong> <a href="mailto:info@linguaedu.ru">lovefremov@internet.ru</a></li>
+                <li><strong>🌐 Соцсети:</strong> <a href="#">VK</a>, <a href="#">Telegram</a>, <a href="#">YouTube</a></li>
+                </ul>
+            </div>
+
+            <div class="contacts__form-block">
+                <h2 class="contacts__subtitle">Форма обратной связи</h2>
+                <form action="#" method="post" class="subscribe-form">
+                <label for="name" class="subscribe-form__label">Имя:</label>
+                <input type="text" id="name" name="name" class="subscribe-form__input" required />
+
+                <label for="email" class="subscribe-form__label">Email:</label>
+                <input type="email" id="email" name="email" class="subscribe-form__input" required />
+
+                <label for="message" class="subscribe-form__label">Сообщение:</label>
+                <textarea id="message" name="message" rows="4" class="subscribe-form__input" required></textarea>
+
+                <button type="submit" class="subscribe-form__button">Отправить</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+      <ul class="footer__links">
+        <li class="footer__item"><a href="contacts.html" class="footer__link">Контакты</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Политика</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Соцсети</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
