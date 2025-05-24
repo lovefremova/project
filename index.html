@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/responsive.css" />
     <link rel="stylesheet" href="styles/animations.css" />
     <link rel="stylesheet" href="styles/preloader.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   </head>
   <body class="page">
     <div class="preloader">
@@ -83,6 +84,22 @@
           </div>
         </section>
 
+        <section class="advantages">
+          <h2 class="advantages__title">Преимущества учёбы у нас</h2>
+          <div class="swiper advantagesSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide advantage__item">Индивидуальный подход к каждому</div>
+              <div class="swiper-slide advantage__item">Опытные преподаватели</div>
+              <div class="swiper-slide advantage__item">Интерактивные материалы</div>
+              <div class="swiper-slide advantage__item">Поддержка 24/7</div>
+              <div class="swiper-slide advantage__item">Доступ с любых устройств</div>
+              <div class="swiper-slide advantage__item">Бесплатные пробные уроки</div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </section>
+
         <form action="#" method="post" class="subscribe-form">
           <label for="email" class="subscribe-form__label">Подпишитесь на новости:</label>
           <input type="email" id="email" name="email" class="subscribe-form__input" required>
@@ -101,6 +118,8 @@
     <script src="js/calendar.js"></script>
     <script src="js/burger.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/form_save.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   </body>
   
 </html>
