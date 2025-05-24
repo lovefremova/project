@@ -1,67 +1,76 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Образовательный портал</title>
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-  <div class="container">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Образовательный портал</title>
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
     <header>
-      <div class="logo">LOGO</div>
-      <nav>
-        <ul class="menu">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Курсы</a></li>
-          <li><a href="#">Медиаархив</a></li>
-          <li><a href="#">Форум</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="main-grid">
-      <div>
-        <section class="welcome-text">
-          <h1>Добро пожаловать</h1>
-          <p>Образовательный портал для студентов и преподавателей профилей английского и немецкого языков. Интерактивные курсы, актуальные новости, методические материалы.</p>
-        </section>
-
-        <section class="news">
-          <h2>Новости и обновления</h2>
-          <div class="news-boxes">
-            <div class="news-item">Новость 1</div>
-            <div class="news-item">Новость 2</div>
-            <div class="news-item">Новость 3</div>
+      <div class="container">
+        <div class="header-inner">
+          <div class="logo-title">
+            <img src="./images/logo.png" alt="Логотип" width="60" height="60"/>
+            <span class="site-title">LinguaEdu</span>
           </div>
-        </section>
+          <nav class="main-nav">
+            <ul class="menu">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Курсы</a></li>
+              <li><a href="#">Медиаархив</a></li>
+              <li><a href="#">Форум</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <div class="main-grid">
+        <div>
+          <section class="welcome-text">
+            <h1>Добро пожаловать</h1>
+            <div class="welcome-desc">
+              <p>LinguaEdu - Образовательный портал для студентов и преподавателей профилей английского и немецкого языков. Интерактивные курсы, актуальные новости, методические материалы.</p>
+            </div>
+          </section>
+
+          <section class="news">
+            <h2>Новости и обновления</h2>
+            <div class="news-boxes">
+              <div class="news-item news1"><span>Технологии на уроке: виртуальная реальность в обучении</span></div>
+              <div class="news-item news2"><span>Дистанционное обучение: как сохранить мотивацию?</span></div>
+              <div class="news-item news3"><span>Учитель нового поколения: цифровая педагогика в действии</span></div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="sidebar">
+          <div class="calendar">
+            <h2>Календарь занятий</h3>
+            <div class="grid"></div>
+          </div>
+          <div class="links">
+            <h2>Быстрые ссылки</h3>
+            <ul>
+              <li>Расписание занятий</li>
+              <li>Личный кабинет</li>
+              <li>Методические материалы</li>
+            </ul>
+          </div>
+        </aside>
       </div>
 
-      <aside class="sidebar">
-        <div class="calendar">
-          <h3>Календарь занятий</h3>
-          <div class="grid"></div>
+      <section class="courses">
+        <h2>Избранные курсы</h2>
+        <div class="course-list">
+          <div class="course-item course1"><span>Английский для начинающих</span></div>
+          <div class="course-item course2"><span>Современный немецкий: от B1 до B2</span></div>
+          <div class="course-item course3"><span>Академическое письмо на английском</span></div>
+          <div class="course-item course4"><span>Методика преподавания иностранных языков</span></div>
         </div>
-        <div class="links">
-          <h3>Быстрые ссылки</h3>
-          <ul>
-            <li>Ссылка 1</li>
-            <li>Ссылка 2</li>
-            <li>Ссылка 3</li>
-          </ul>
-        </div>
-      </aside>
-    </div>
-
-    <section class="courses">
-      <h2>Избранные курсы</h2>
-      <div class="course-list">
-        <div class="course-item">Курс</div>
-        <div class="course-item">Курс</div>
-        <div class="course-item">Курс</div>
-        <div class="course-item">Курс</div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer>
       <ul class="footer-links">
@@ -70,6 +79,5 @@
         <li><a href="#">Соцсети</a></li>
       </ul>
     </footer>
-  </div>
-</body>
+  </body>
 </html>
