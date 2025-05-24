@@ -8,6 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
     'Методика преподавания иностранных языков'
   ];
 
+  const newsList = [
+    {
+        title: 'Технологии на уроке',
+        text: 'Виртуальная реальность в обучении — первый опыт преподавателей.'
+    },
+    {
+        title: 'Дистанционное обучение',
+        text: 'Как сохранить мотивацию студентов и избежать выгорания?'
+    },
+    {
+        title: 'Цифровая педагогика',
+        text: 'Учитель нового поколения — технологии и подходы.'
+    }
+  ]
+
   const coursesContainer = document.querySelector('.courses__list');
   if (coursesContainer) {
     coursesContainer.innerHTML = '';
@@ -17,6 +32,21 @@ document.addEventListener('DOMContentLoaded', () => {
       courseDiv.innerHTML = `<span class="courses__text">${title}</span>`;
       coursesContainer.appendChild(courseDiv);
     });
+  }
+  const newsContainer = document.querySelector('.news__list');
+  if (newsContainer) {
+    newsContainer.innerHTML = '';
+    for (const index in newsList) {
+      if (newsList.hasOwnProperty(index)) {
+        const news = newsList[index];
+        const newsItem = document.createElement('div');
+        newsItem.className = `news__item news__item--${parseInt(index) + 1}`;
+        newsItem.innerHTML = `
+          <p class="news__text" title="${news.title}">${news.text}</p>
+        `;
+        newsContainer.appendChild(newsItem);
+      }
+    }
   }
 
   // Кнопка скролла вверх
