@@ -7,6 +7,10 @@
   border-bottom: 1px solid #ccc;
   height: 60px;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
 }
 
 .header__inner {
@@ -61,9 +65,11 @@
   max-width: 1440px;
   margin: 0 auto;
   width: 95%;
+  padding: 20px;
 }
 
 /* Welcome */
+
 .welcome__desc {
   display: flex;
   align-items: center;
@@ -72,7 +78,7 @@
 
 /* Календарь и ссылки */
 .calendar__grid {
-  height: 200px;
+  height: 225px;
   background: #eee;
   margin-top: 5%;
 }
@@ -96,6 +102,7 @@ h1, h2, h3 {
 
 .news__item {
   flex: 1;
+  min-width: 190px;
   background: #f4f4f4;
   background-size: cover;
   padding: 2%;
@@ -142,7 +149,6 @@ h1, h2, h3 {
 }
 
 .courses__item {
-  flex: 1;
   background: #fafafa;
   background-size: cover;
   height: 13em;
@@ -152,6 +158,9 @@ h1, h2, h3 {
   justify-content: center;
   padding: 2%;
   position: relative;
+  flex: 1;
+  min-width: 280px;
+  max-width: 100%;
 }
 
 .courses__item::before {
@@ -261,4 +270,31 @@ a:focus {
 
 button:hover {
   opacity: 0.9;
+}
+
+.main__content {
+  flex: 2;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  flex: 1;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.news__text,
+.courses__text,
+.welcome__text,
+.quick-links__list {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.news__list,
+.courses__list {
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
