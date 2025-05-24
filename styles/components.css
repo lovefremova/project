@@ -64,7 +64,6 @@
 .page {
   max-width: 1440px;
   margin: 0 auto;
-  width: 95%;
 }
 
 /* Welcome */
@@ -78,7 +77,6 @@
 /* Календарь и ссылки */
 .calendar {
   width: 100%;
-  margin-bottom: 2em; /* Отступ вниз */
   padding-bottom: 1em;
 }
 
@@ -292,6 +290,10 @@ button:hover {
   hyphens: auto;
 }
 
+.welcome__text {
+  margin-bottom: 125px;
+}
+
 .news__list,
 .courses__list {
   flex-wrap: wrap;
@@ -420,6 +422,9 @@ input:disabled {
   transition: box-shadow 0.3s ease-in-out;
 }
 
+.calendar__title {
+  margin-left: 75px;
+}
 
 .calendar__title-wrapper {
   display: flex;
@@ -443,4 +448,54 @@ input:disabled {
 
 .calendar__btn:hover {
   background-color: #34495e;
+}
+
+.lang-dropdown {
+  position: relative;
+  margin-left: 20px;
+}
+
+.lang-dropdown__current {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.lang-dropdown__list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #2c3e50;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  min-width: 60px;
+}
+
+.lang-dropdown__list li {
+  border-bottom: 1px solid #444;
+}
+
+.lang-dropdown__list li:last-child {
+  border-bottom: none;
+}
+
+.lang-dropdown__list button {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lang-dropdown--open .lang-dropdown__list {
+  display: block;
 }

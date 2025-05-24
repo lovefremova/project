@@ -1,5 +1,4 @@
-.header__container, 
-.main__container, 
+.header__container,  
 .footer__container {
   width: 95%;
   max-width: 100%;
@@ -9,6 +8,7 @@
 .main__grid {
   display: grid;
   grid-template-columns: 65% 30%;
+  gap: 2%;
   margin-top: 3%;
   align-items: stretch;
 }

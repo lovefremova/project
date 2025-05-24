@@ -16,7 +16,7 @@
       <div class="header__container">
         <div class="header__inner">
           <div class="header__logo-title">
-            <img class="header__logo" src="./images/logo.png" alt="Логотип" width="60" height="60"/>
+            <img class="header__logo" src="./images/logo.png" alt="Логотип" width="60" height="60" />
             <span class="header__site-title">LinguaEdu</span>
           </div>
           <nav class="header__nav nav">
@@ -32,6 +32,14 @@
             <span class="burger__line"></span>
             <span class="burger__line"></span>
           </button>
+          <div class="lang-dropdown">
+            <button class="lang-dropdown__current" aria-label="Выбрать язык">RU ▼</button>
+            <ul class="lang-dropdown__list">
+                <li><button class="lang-switch" data-lang="ru">RU</button></li>
+                <li><button class="lang-switch" data-lang="en">EN</button></li>
+                <li><button class="lang-switch" data-lang="de">DE</button></li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -75,10 +83,7 @@
       <section class="courses">
         <h2 class="courses__title">Избранные курсы</h2>
         <div class="courses__list">
-          <div class="courses__item courses__item--1"><span class="courses__text">Английский для начинающих</span></div>
-          <div class="courses__item courses__item--2"><span class="courses__text">Современный немецкий: от B1 до B2</span></div>
-          <div class="courses__item courses__item--3"><span class="courses__text">Академическое письмо на английском</span></div>
-          <div class="courses__item courses__item--4"><span class="courses__text">Методика преподавания иностранных языков</span></div>
+          <!-- Курсы выводятся динамически -->
         </div>
       </section>
 
@@ -96,6 +101,8 @@
         <li class="footer__item"><a href="#" class="footer__link">Соцсети</a></li>
       </ul>
     </footer>
+    <script src="js/calendar.js"></script>
+    <script src="js/burger.js"></script>
     <script src="js/scripts.js"></script>
   </body>
   

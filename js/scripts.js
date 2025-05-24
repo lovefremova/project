@@ -1,118 +1,45 @@
-// Алгоритм: при прокрутке страницы, как только блок с календарём появляется в зоне видимости, он подсвечивается.
-// Ссылка на блок-схему: https://app.diagrams.net/#G1K429dtNyUYHp734oIxobs8q4gMOSeTjd#%7B%22pageId%22%3A%22Wz0CzlS7Yllp8K9p48SS%22%7D 
-
-// Объявляем переменную для календарного блока
-const calendarBlock = document.querySelector('.calendar__grid');
-
-// Функция для проверки видимости элемента
-function isVisible(el) {
-  const rect = el.getBoundingClientRect();
-  return rect.top < window.innerHeight && rect.bottom >= 0;
-}
-
-// Слушатель на событие scroll
-window.addEventListener('scroll', () => {
-  if (isVisible(calendarBlock)) {
-    console.log('Блок календаря стал видимым');
-  }
-});
-
-const scheduleData = {
-  "2025-05-15": "Английский A2",
-  "2025-05-20": "Немецкий B1",
-  "2025-05-27": "Методика"
-};
-
-const monthDays = {
-  1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30,
-  7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31
-};
-
-const monthNames = [
-  'Январь', 'Февраль', 'Март', 'Апрель',
-  'Май', 'Июнь', 'Июль', 'Август',
-  'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
-];
-
-const calendarContainer = document.querySelector('.calendar__grid');
-const calendarTitle = document.createElement('div');
-calendarTitle.className = 'calendar__title-wrapper';
-calendarContainer.before(calendarTitle);
-
-const today = new Date();
-let currentYear = today.getFullYear();
-let currentMonth = today.getMonth() + 1;
-
-function isLeapYear(year) {
-  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-}
-
-function generateCalendar(year, month) {
-  calendarContainer.innerHTML = '';
-  calendarTitle.innerHTML = '';
-
-  // Заголовок календаря < Месяц Год >
-  const prevBtn = document.createElement('button');
-  prevBtn.textContent = '<';
-  prevBtn.className = 'calendar__btn';
-
-  const nextBtn = document.createElement('button');
-  nextBtn.textContent = '>';
-  nextBtn.className = 'calendar__btn';
-
-  const title = document.createElement('span');
-  title.className = 'calendar__month-title';
-  title.textContent = `${monthNames[month - 1]} ${year}`;
-
-  calendarTitle.appendChild(prevBtn);
-  calendarTitle.appendChild(title);
-  calendarTitle.appendChild(nextBtn);
-
-  // Обработка високосного февраля
-  let daysInMonth = monthDays[month];
-  if (month === 2 && isLeapYear(year)) {
-    daysInMonth = 29;
-  }
-
-  for (let day = 1; day <= daysInMonth; day++) {
-    const date = new Date(year, month - 1, day);
-    const formattedDate = date.toISOString().split('T')[0];
-
-    const cell = document.createElement('div');
-    cell.classList.add('calendar__cell');
-    cell.textContent = day;
-    cell.setAttribute('data-date', formattedDate);
-
-    if (scheduleData[formattedDate]) {
-      cell.classList.add('has-lesson');
-      cell.title = scheduleData[formattedDate];
-    }
-
-    calendarContainer.appendChild(cell);
-  }
-
-  // Слушатели на кнопки
-  prevBtn.addEventListener('click', () => {
-    if (currentMonth === 1) {
-      currentMonth = 12;
-      currentYear -= 1;
-    } else {
-      currentMonth -= 1;
-    }
-    generateCalendar(currentYear, currentMonth);
-  });
-
-  nextBtn.addEventListener('click', () => {
-    if (currentMonth === 12) {
-      currentMonth = 1;
-      currentYear += 1;
-    } else {
-      currentMonth += 1;
-    }
-    generateCalendar(currentYear, currentMonth);
-  });
-}
+'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
-  generateCalendar(currentYear, currentMonth);
+  const courseTitles = [
+    'Английский для начинающих',
+    'Современный немецкий: от B1 до B2',
+    'Академическое письмо на английском',
+    'Методика преподавания иностранных языков'
+  ];
+
+  const coursesContainer = document.querySelector('.courses__list');
+  if (coursesContainer) {
+    coursesContainer.innerHTML = '';
+    courseTitles.forEach((title, index) => {
+      const courseDiv = document.createElement('div');
+      courseDiv.className = `courses__item courses__item--${index + 1}`;
+      courseDiv.innerHTML = `<span class="courses__text">${title}</span>`;
+      coursesContainer.appendChild(courseDiv);
+    });
+  }
+
+  // Кнопка скролла вверх
+  const scrollButton = document.createElement('button');
+  scrollButton.innerText = '↑';
+  scrollButton.classList.add('scroll-to-top');
+  scrollButton.style.position = 'fixed';
+  scrollButton.style.bottom = '20px';
+  scrollButton.style.right = '20px';
+  scrollButton.style.padding = '10px 15px';
+  scrollButton.style.display = 'none';
+  scrollButton.style.backgroundColor = '#2c3e50';
+  scrollButton.style.color = 'white';
+  scrollButton.style.border = 'none';
+  scrollButton.style.borderRadius = '5px';
+  scrollButton.style.cursor = 'pointer';
+  document.body.appendChild(scrollButton);
+
+  scrollButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', () => {
+    scrollButton.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
 });
